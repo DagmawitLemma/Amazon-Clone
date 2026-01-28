@@ -1,36 +1,52 @@
-.category{
-    height: 250px;
-    width: 250px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.category {
+  padding: 5px;
+  padding-top: 10px;
+  height: 300px;
+  width: 300px; 
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.category a {
+  display: block;
+  object-fit: fill;
+  text-decoration: none;
+  color: rgb(35, 35, 35);
+  /* border: 1px solid red; */
 }
 .category img {
-    width: 100%;
-    object-fit: contain;
-    max-height: 170px;
-    padding: 0px 6px;
-}
-.category a{
-    text-decoration: none;
-    color: rgb(35, 35, 35);
+  width: 100%;
+  object-fit: contain;
+  max-height: 200px;
+  margin: 10px auto;
 }
 .category h2,
-.category p{
-    padding: 5px;
-    margin-left: 15px;
+.category p {
+  padding:3px 25px;
 }
+
 .category h2{
-    font-size: 18px;
+  font-size: 1.2rem;
 }
 .category p {
-    font-size: 12px;
-    font-weight: bold;
-    color: rgb(9, 132, 209);
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 132, 209);
 }
 .category_container {
-    position: relative;
-    margin-top: -10%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
+  position: relative;
+  max-width: 1400px;
+  padding: 30px;
+  margin: -20% auto auto auto;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: grid;
+  gap: 20px;
+  place-items: center;
+}
+
+
+@media screen and (max-width: 576px) {
+  .category{
+    width: 90%;
+    text-align: center;
+  }
 }
